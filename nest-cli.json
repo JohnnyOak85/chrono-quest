@@ -1,0 +1,41 @@
+{
+  "$schema": "https://json.schemastore.org/nest-cli",
+  "collection": "@nestjs/schematics",
+  "sourceRoot": "apps/chrono-quest/src",
+  "compilerOptions": {
+    "deleteOutDir": true,
+    "webpack": true,
+    "tsConfigPath": "apps/chrono-quest/tsconfig.app.json"
+  },
+  "monorepo": true,
+  "root": "apps/chrono-quest",
+  "projects": {
+    "chrono-quest": {
+      "type": "application",
+      "root": "apps/chrono-quest",
+      "entryFile": "main",
+      "sourceRoot": "apps/chrono-quest/src",
+      "compilerOptions": {
+        "tsConfigPath": "apps/chrono-quest/tsconfig.app.json"
+      }
+    },
+    "task": {
+      "type": "application",
+      "root": "apps/task",
+      "entryFile": "main",
+      "sourceRoot": "apps/task/src",
+      "compilerOptions": {
+        "tsConfigPath": "apps/task/tsconfig.app.json"
+      }
+    },
+    "achievement": {
+      "type": "application",
+      "root": "apps/achievement",
+      "entryFile": "main",
+      "sourceRoot": "apps/achievement/src",
+      "compilerOptions": {
+        "tsConfigPath": "apps/achievement/tsconfig.app.json"
+      }
+    }
+  }
+}
